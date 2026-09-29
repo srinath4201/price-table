@@ -1,0 +1,82 @@
+/* Products page */
+:root{
+  --cyan:#0cb4e6;
+  --cyan-light:#bfe5f4;
+  --line:#e6e8eb;
+  --bg:#f5f6f8;
+  --toggle:#0fb2ea;
+}
+html,body{height:100%}
+body{background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+
+/* ---------- Sub header buttons ---------- */
+.btn-add{padding:0 20px 0 19px}
+.btn-add svg{margin-right:14px}
+.btn-view{padding:0 12px 0 19px}
+.btn-view svg{margin-left:10px}
+
+/* ---------- Content ---------- */
+.content{flex:1;display:flex;flex-direction:column;padding:11px 7px 0;min-height:0}
+.grid{flex:1;overflow-y:auto;background:#fff;min-height:0;border-bottom:2px solid #22b3e6}
+.grid::-webkit-scrollbar{width:5px}
+.grid::-webkit-scrollbar-track{background:#fff}
+.grid::-webkit-scrollbar-thumb{background:#0ea5e0;border-radius:4px}
+table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed}
+th,td{text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 18px}
+
+/* column widths */
+.c-chk{width:50px;padding:0;text-align:center}
+.c-col{width:283px}
+.c-menu{width:50px;padding:0;text-align:center}
+.c-grid{width:40px;padding:0;text-align:center}
+.c-set{padding:0;text-align:center}
+
+thead th{position:sticky;top:0;z-index:2;height:30px;background:var(--cyan);color:#fff;font-size:13px;font-weight:600;border-right:1px solid #fff}
+thead th:last-child{border-right:none}
+thead tr.frow th{top:30px;height:31px;background:var(--cyan-light);font-weight:400}
+
+/* checkboxes */
+.chk{appearance:none;-webkit-appearance:none;width:14px;height:14px;border:1.5px solid #6f6f6f;border-radius:2px;background:#fff;vertical-align:middle;cursor:pointer;position:relative;margin:0}
+thead .chk{width:15px;height:15px;border-color:#fff}
+.chk:checked{background:var(--cyan);border-color:var(--cyan)}
+thead .chk:checked{background:#fff;border-color:#fff}
+.chk:checked::after{content:"";position:absolute;left:3.5px;top:0;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+thead .chk:checked::after{border-color:var(--cyan)}
+
+/* search in filter row */
+.search-cell{display:flex;align-items:center;gap:8px}
+.sicon{width:20px;height:20px;border-radius:50%;background:#fff;border:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+.search{display:none;width:200px;height:20px;border:1px solid #b8bcc2;border-radius:3px;padding:0 8px;font-family:inherit;font-size:12.5px;color:#333;outline:none}
+.search-cell.open .search{display:block}
+
+/* small select filters */
+.select{position:relative;display:inline-block;width:62px}
+.select select{appearance:none;-webkit-appearance:none;width:100%;height:20px;border:1px solid #aeb3b9;border-radius:3px;background:#fff;padding:0 16px 0 9px;font-family:inherit;font-size:12.5px;color:#222;outline:none;cursor:pointer}
+.select svg{position:absolute;right:5px;top:50%;transform:translateY(-50%);pointer-events:none}
+
+/* header settings button */
+.set-btn{width:22px;height:22px;border:1px solid var(--pink);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;background:#fff;vertical-align:middle;cursor:pointer}
+
+tbody td{height:30px;font-size:12.5px;color:#222;border-bottom:1px solid var(--line)}
+tbody tr:hover td{background:#eaf3fb}
+.p-link{color:inherit;text-decoration:none}
+.p-link:hover{color:var(--cyan);text-decoration:underline}
+
+/* ---------- Toggles ---------- */
+.toggle{position:relative;width:48px;height:20px;border-radius:10px;border:1.5px solid var(--toggle);background:var(--toggle);cursor:pointer;display:inline-flex;align-items:center;padding:0 0 0 7px;vertical-align:middle;font-family:inherit;font-size:10px;font-weight:600;color:#fff;transition:background .2s,border-color .2s}
+.toggle .knob{position:absolute;top:4px;right:6px;width:9px;height:9px;border-radius:50%;background:#fff}
+.toggle.off{background:#fff;border-color:#6f6f6f;color:#6f6f6f;justify-content:flex-end;padding:0 7px 0 0}
+.toggle.off .knob{right:auto;left:4px;background:#fff;border:1.3px solid #6f6f6f}
+.toggle:disabled{cursor:default;opacity:.35}
+.toggle.off:disabled{opacity:1;border-color:#cfd3d7;color:#c4c8cc}
+.toggle.off:disabled .knob{border-color:#cfd3d7}
+.toggle.on:disabled{opacity:.65}
+
+/* row icons */
+.kebab{display:inline-flex;flex-direction:column;gap:2px;vertical-align:middle;cursor:pointer}
+.kebab i{width:3px;height:3px;background:#222;border-radius:50%}
+.dots{vertical-align:middle;cursor:pointer}
+
+/* ---------- Footer ---------- */
+.footer{height:24px;flex-shrink:0;position:relative;border-bottom:2px solid #22b3e6;margin-bottom:4px}
+.footer .total{position:absolute;right:2px;bottom:3px;color:#1aa2dc;font-size:12.5px;font-weight:500}

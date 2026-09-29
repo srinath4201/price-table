@@ -1,0 +1,24 @@
+/* Settings page */
+:root{
+  --cyan:#0ea8e0;
+  --item:#6b6b6b;
+  --line:#e6e8eb;
+  --bg:#f0f1f3;
+}
+html{scrollbar-width:thin;scrollbar-color:#1592d8 #e9ecef}
+html::-webkit-scrollbar{width:10px}
+html::-webkit-scrollbar-track{background:#e9ecef}
+html::-webkit-scrollbar-thumb{background:#1592d8}
+body{background:var(--bg);min-height:100vh}
+.topnav{position:sticky;top:0;z-index:10}
+
+/* ---------- Settings cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(5,332px);gap:20px 14px;padding:10px 0 20px 81px}
+.card{background:#fff;height:277px;border-radius:2px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.card-head{height:31px;display:flex;align-items:center;gap:10px;padding:0 20px;border-bottom:1px solid var(--line)}
+.card-head svg{flex-shrink:0}
+.card-head h2{font-size:13px;font-weight:600;color:var(--cyan)}
+.card ul{list-style:none;padding:8px 22px 0}
+.card li{height:24px;display:flex;align-items:center}
+.card li a{color:var(--item);text-decoration:none;font-size:12.5px}
+.card li a:hover{color:var(--cyan)}

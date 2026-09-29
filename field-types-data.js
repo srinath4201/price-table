@@ -1,0 +1,31 @@
+// Shared field type list, used by the Field Types page and the Add New Field popup
+// [name, category, status(true = On)]
+const FIELD_TYPES = [
+  ["List","System Field Type",true],
+  ["Numeric","System Field Type",true],
+  ["Qty","System Field Type",true],
+  ["Unit Type","System Field Type",true],
+  ["Pricing Group","System Field Type",true],
+  ["Supplier","System Field Type",true],
+  ["Blinds Fabrics Materials","System Field Type",true],
+  ["Awnings Materials","System Field Type",true],
+  ["Blinds Slat Materials","System Field Type",true],
+  ["Shutter Materials","System Field Type",true],
+  ["Soft Furnishings Materials","System Field Type",true],
+  ["Lining Type","System Field Type",true],
+  ["Numeric X","System Field Type",true],
+  ["Numeric Y","System Field Type",true],
+  ["Numeric (X Square Meterage)","System Field Type",true],
+  ["Numeric (Y Square Meterage)","System Field Type",true],
+  ["Numeric (X Square Footage)","System Field Type",true],
+  ["Numeric (Y Square Footage)","System Field Type",true],
+  ["Numeric (X Square Yard)","System Field Type",true],
+  ["Numeric (Y Square Yard)","System Field Type",true],
+  ["Numeric Fraction","System Field Type",true],
+  ["Location_List","System Field Type",true],
+  ["Location_Text","System Field Type",true],
+  ["Text","System Field Type",true],
+  ["Rate by Hour","System Field Type",true],
+  ["Blinds Opening Width","System Field Type",true],
+  ["Pricing group filter","System Field Type",false]
+];

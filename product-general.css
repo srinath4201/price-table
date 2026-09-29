@@ -1,0 +1,94 @@
+/* Product > General Info page (layout + side menu: product-layout.css) */
+:root{
+  --line:#e3e6ea;
+  --field:#c8ccd0;
+  --toggle:#0fb2ea;
+  --green:#6abf4b;
+  --req:#e5197d;
+}
+.main-body{flex:1;overflow:auto;padding:10px 7px 0 6px}
+.section{border:1px solid var(--line);border-radius:2px;margin-bottom:13px}
+.section h2{font-size:14px;font-weight:600;color:#111}
+
+/* Product info */
+.info{padding:10px 0 12px 22px}
+.info h2{margin:6px 0 2px -15px}
+.info-grid{display:grid;grid-template-columns:271px 409px 133px 271px 409px;grid-auto-rows:49px;align-items:center}
+.info-grid .gap{grid-column:3}
+label.lbl,.lbl{font-size:12.5px;font-weight:500;color:#222}
+.lbl sup{color:var(--req);font-size:13px;vertical-align:top;line-height:1;margin-left:1px}
+
+.input{width:100%;height:30px;border:1px solid var(--field);border-radius:3px;padding:0 10px;font-family:inherit;font-size:12.5px;color:#222;background:#fff;outline:none}
+.input::placeholder{color:#7d7d7d}
+.input:focus{border:2px solid var(--cyan);padding:0 9px}
+.input.invalid{border:1px solid #e53935}
+
+.select{position:relative}
+.select select{appearance:none;-webkit-appearance:none;width:100%;height:30px;border:1px solid var(--field);border-radius:3px;padding:0 30px 0 10px;font-family:inherit;font-size:12.5px;color:#222;background:#fff;outline:none;cursor:pointer}
+.select select:focus{border-color:var(--cyan)}
+.select.grey select{background:#eceef0}
+.select svg{position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none}
+
+.checks{display:flex;align-items:center;gap:30px}
+.checks.usage{gap:12px}
+.check{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#222;cursor:pointer}
+.check input{appearance:none;-webkit-appearance:none;width:13px;height:13px;border:1.3px solid #555;border-radius:2px;background:#fff;position:relative;cursor:pointer;margin:0}
+.check input:checked{background:var(--cyan);border-color:var(--cyan)}
+.check input:checked::after{content:"";position:absolute;left:3.5px;top:.5px;width:3px;height:7px;border:solid #fff;border-width:0 1.8px 1.8px 0;transform:rotate(45deg)}
+.check input:disabled{border-color:#d0d3d6;cursor:default}
+.check input:disabled:checked{background:#d7dadd;border-color:#d7dadd}
+.check input:disabled + span{cursor:default}
+.lock{width:30px;height:30px;border-radius:50%;border:none;background:#e3e5e8;display:flex;align-items:center;justify-content:center;cursor:pointer;margin-left:0}
+.lock.unlocked{background:#d4f0fb}
+
+/* Modules */
+.modules{padding:14px 0 16px 28px}
+.modules h2{margin:0 0 19px -1px}
+.mod-grid{display:grid;grid-template-columns:repeat(4,403px);align-items:center}
+.mod{display:flex;align-items:center;justify-content:space-between;padding-right:30px;font-size:12.5px;color:#222}
+
+.toggle{position:relative;width:49px;height:20px;border-radius:10px;border:1.5px solid var(--toggle);background:var(--toggle);cursor:pointer;display:inline-flex;align-items:center;padding:0 0 0 7px;font-family:inherit;font-size:10px;font-weight:600;color:#fff}
+.toggle .knob{position:absolute;top:4px;right:6px;width:9px;height:9px;border-radius:50%;background:#fff}
+.toggle.off{background:#fff;border-color:#9a9ea3;color:#9a9ea3;justify-content:flex-end;padding:0 7px 0 0}
+.toggle.off .knob{right:auto;left:4px;border:1.3px solid #9a9ea3}
+
+/* Product images */
+.images{padding:14px 0 34px 28px}
+.images h2{margin:0 0 17px -1px}
+.img-grid{display:grid;grid-template-columns:269px 405px 133px 269px 405px;row-gap:30px;align-items:start}
+.img-grid .lbl{display:flex;align-items:center;gap:4px;padding-top:7px}
+.info-i{display:inline-flex}
+.img-box{height:60px;border:1px solid var(--field);border-radius:3px;display:flex;align-items:center;gap:22px;padding:0 10px}
+.thumb{position:relative;width:36px;height:36px;border:1px solid #d5d8db;border-radius:3px;background-size:cover;background-position:center;cursor:pointer;flex-shrink:0}
+.thumb.selected{border:2px solid var(--cyan)}
+.thumb .rm{position:absolute;top:-6px;right:-7px;width:12px;height:12px;border-radius:50%;background:#e53935;border:1px solid #fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.thumb.broken{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23999' stroke-width='1.2'%3E%3Cpath d='M1.5 1.5h13v13h-13z'/%3E%3Cpath d='M2 12l4-4 3 3 2-2 3 3'/%3E%3C/svg%3E") 3px 3px/16px no-repeat}
+.thumb.bg1{background-image:linear-gradient(160deg,#fafafa 0%,#e6e6e6 45%,#c9c9c9 100%)}
+.thumb.bg2{background-image:linear-gradient(90deg,#7a4a2a,#c48a5a 35%,#e8d9c4 50%,#c48a5a 65%,#7a4a2a)}
+.thumb.bg3{background-image:linear-gradient(200deg,#f2f2f2 0%,#d9dcdf 55%,#b9bdc1 100%)}
+.add-img{background:none;border:none;cursor:pointer;display:flex;padding:0}
+
+.drop,.img-box.empty{height:54px;border:2px dashed var(--pink);border-radius:3px;display:flex;align-items:center;gap:12px;padding:0 8px;font-size:12.5px;color:#222;cursor:pointer}
+.drop.over,.img-box.empty.over{background:#fff3f8}
+.drop .up,.drop-empty .up{width:38px;height:38px;border-radius:50%;background:#fde4ef;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.drop b,.drop-empty b{color:var(--pink);font-weight:500}
+
+/* image box with every image removed: shows the upload prompt like .drop */
+.img-box .drop-empty{display:none}
+.img-box.empty .drop-empty{display:contents}
+.img-box.empty .add-img{display:none}
+.drop .file-name{color:#1592d8;font-weight:500}
+.hidden-file{display:none}
+
+/* Size */
+.size{padding:14px 0 30px 28px}
+.size h2{margin:0 0 18px -1px}
+.size-row{display:grid;grid-template-columns:269px 253px 119px;align-items:center}
+.size-row .select{margin-left:16px}
+.size-row .select svg{right:6px}
+
+/* ---------- Footer ---------- */
+.main-foot{height:43px;flex-shrink:0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:0 12px}
+.btn{height:30px;border-radius:3px;font-family:inherit;font-size:12.5px;font-weight:500;cursor:pointer;padding:0 19px}
+.btn-save{background:var(--green);color:#fff;border:1px solid var(--green)}
+.btn-cancel{background:#fff;color:#555;border:1px solid #9a9ea3;padding:0 20px;text-decoration:none;display:flex;align-items:center}

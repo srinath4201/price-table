@@ -1,0 +1,72 @@
+/* All Job page */
+:root{
+  --cyan:#0cb4e6;
+  --cyan-light:#bfe5f4;
+  --blue:#1592d8;
+  --muted:#7a7a7a;
+  --line:#e3e6ea;
+  --red:#f0303a;
+  --bg:#f5f6f8;
+}
+html,body{height:100%}
+body{background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+
+/* ---------- Sub header actions ---------- */
+.btn-pink svg{margin-left:26px}
+.btn-pink.reports{padding:0 12px 0 19px}
+.btn-pink.reports svg{margin-left:9px}
+
+/* ---------- Content ---------- */
+.content{flex:1;display:flex;flex-direction:column;padding:0 16px 0 16px;min-height:0}
+.tabs{display:flex;height:52px;align-items:center;padding-left:42px;gap:0;flex-shrink:0}
+.tabs a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:400;margin-right:55px}
+.tabs a.active{color:#11a7df;font-weight:500;margin-right:70px}
+.tools{display:flex;align-items:center;gap:18px;height:22px;margin-bottom:6px;flex-shrink:0;padding-left:1px}
+.filter-btn{width:26px;height:26px;border-radius:50%;border:1px solid #9aa0a6;display:flex;align-items:center;justify-content:center;background:#fff}
+.search{width:565px;height:22px;border:1px solid #b8bcc2;border-radius:3px;padding:0 9px;font-family:inherit;font-size:12.5px;color:#333;background:#fff;outline:none}
+.search::placeholder{color:#555}
+
+/* ---------- Grid ---------- */
+.grid-wrap{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
+.grid{flex:1;overflow:auto;background:#fff;min-height:0}
+.grid::-webkit-scrollbar{width:6px;height:6px}
+.grid::-webkit-scrollbar-track{background:#fff}
+.grid::-webkit-scrollbar-thumb{background:#0ea5e0;border-radius:4px}
+table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:max-content}
+th,td{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
+thead th{position:sticky;top:0;z-index:3;background:var(--cyan);color:#fff;font-weight:600;font-size:12px;height:30px;padding:0 18px;border-right:1px solid #fff}
+thead tr.frow th{top:30px;background:var(--cyan-light);height:31px;padding:0 14px;border-right:1px solid #fff}
+.sicon{width:20px;height:20px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
+tbody td{height:31px;padding:0 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);color:var(--text);background:#fff}
+tbody tr.overdue td{color:var(--red)}
+td.c-chk,th.c-chk{width:50px;padding:0;text-align:center}
+td.c-exp,th.c-exp{width:56px;padding:0;text-align:center}
+.col{width:200px}
+th.c-gross,td.c-gross{width:200px}
+th.c-act,td.c-act{width:40px;padding:0;text-align:center;position:sticky;right:0;z-index:2}
+thead th.c-act{z-index:4;background:#fff;border-right:none}
+thead tr.frow th.c-act{background:#fff}
+td.c-act{background:#fff;border-right:none}
+.chk{width:14px;height:14px;border:1.5px solid #6f6f6f;border-radius:2px;display:inline-block;vertical-align:middle;background:#fff}
+thead .chk{width:15px;height:15px;border-color:#fff;border-radius:2px}
+.exp{width:20px;height:20px;border-radius:4px;background:#0f9fdc;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
+.set-btn{width:25px;height:25px;border:1px solid var(--pink);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;background:#fff;vertical-align:middle}
+
+/* ---------- Job status cells ---------- */
+td.status{padding:0 18px;position:relative}
+td.status .caret{position:absolute;right:16px;top:50%;transform:translateY(-50%)}
+.st-agent,.st-backorder{background:#e8e8e8 !important}
+.st-lead{background:#fbfb9c !important}
+.st-order{background:#f7a6ea !important}
+.st-invoiced{background:#1ec96a !important}
+.st-rejected{background:#f35d5f !important;color:#fff !important}
+.st-partial{background:#a7d7bb !important}
+
+.kebab{display:inline-flex;flex-direction:column;gap:2px;vertical-align:middle}
+.kebab i{width:3px;height:3px;background:#1592d8;border-radius:50%}
+
+.side-toggle{position:absolute;right:-12px;top:390px;width:24px;height:24px;border-radius:50%;background:#555b63;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+
+/* ---------- Footer ---------- */
+.footer{height:34px;flex-shrink:0;position:relative;border-bottom:3px solid #22b3e6;margin-bottom:4px}
+.footer .total{position:absolute;right:-6px;bottom:3px;color:#1aa2dc;font-size:12.5px;font-weight:500}

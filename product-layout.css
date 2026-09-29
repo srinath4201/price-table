@@ -1,0 +1,47 @@
+/* Shared layout for product pages: side menu + white main panel */
+:root{
+  --cyan:#16b3e8;
+  --bg:#eceef1;
+  --side-active:#151830;
+}
+html,body{height:100%}
+body{background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+.crumb .current{color:var(--pink)}
+
+.layout{flex:1;display:flex;gap:10px;padding:12px;min-height:0}
+
+/* ---------- Side menu ---------- */
+.side{width:234px;flex-shrink:0;background:var(--nav);border-radius:3px;padding-top:12px;overflow-y:auto;transition:width .2s}
+.side-head{height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 30px;color:#d5d8e6;font-size:13px}
+.side-toggle{background:none;border:none;cursor:pointer;display:flex;padding:2px}
+.side-menu{list-style:none;margin-top:6px}
+.side-menu > li{position:relative}
+.side-menu a{height:40px;display:flex;align-items:center;gap:12px;padding:0 16px 0 34px;margin-right:6px;color:#dfe2ee;font-size:12.5px;text-decoration:none;border-radius:0 3px 3px 0}
+.side-menu a:hover{background:#252a4a}
+.side-menu svg{flex-shrink:0}
+.side-menu .chev{margin-left:auto;transition:transform .2s}
+
+/* active item (and its open sub menu) */
+.side-menu > li.active{background:var(--side-active);margin:0 6px 0 14px;border-radius:0 3px 3px 0}
+.side-menu > li.active::before{content:"";position:absolute;left:-14px;top:0;height:40px;width:4px;background:var(--cyan)}
+.side-menu > li.active > a{color:#fff;font-weight:600;padding-left:20px;margin:0;background:none}
+.side-menu > li.open > a .chev{transform:rotate(180deg)}
+
+/* sub menu */
+.sub{display:none;list-style:none;margin:0 0 8px 13px;border-left:2px solid #343a5c}
+.side-menu > li.open .sub{display:block}
+.sub a{height:30px;padding:0 10px 0 20px;margin:0 0 0 -2px;border-left:2px solid transparent;font-size:12px;border-radius:0;display:block;line-height:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub a:hover{background:none;color:#fff}
+.sub a.current{color:var(--cyan);font-weight:600;border-left-color:var(--cyan)}
+
+/* collapsed */
+.side.collapsed{width:56px}
+.side.collapsed .side-head{padding:0;justify-content:center}
+.side.collapsed .side-head span,.side.collapsed .label,.side.collapsed .chev,.side.collapsed .sub{display:none !important}
+.side.collapsed .side-toggle svg{transform:rotate(180deg)}
+.side.collapsed .side-menu a{padding:0;justify-content:center;margin:0}
+.side.collapsed .side-menu > li.active{margin:0}
+.side.collapsed .side-menu > li.active::before{left:0}
+
+/* ---------- Main panel ---------- */
+.main{flex:1;min-width:0;background:#fff;border-radius:4px;display:flex;flex-direction:column}

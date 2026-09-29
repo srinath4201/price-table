@@ -1,0 +1,110 @@
+/* Product > Fields and Values page (layout + side menu: product-layout.css) */
+:root{
+  --head:#0cb4e6;
+  --line:#e6e8eb;
+  --toggle:#0fb2ea;
+}
+.main{padding:6px 6px 2px 7px;position:relative}
+.main:fullscreen{padding:12px;border-radius:0}
+
+/* ---------- Toolbar ---------- */
+.toolbar{height:36px;display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-shrink:0;margin-bottom:6px}
+.btn-add-field{padding:0 20px 0 20px}
+.btn-add-field svg{margin-right:10px}
+.btn-full{width:29px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+
+/* ---------- Grid ---------- */
+.grid{flex:1;min-height:0;overflow:auto;border:1px solid var(--line);border-bottom:2px solid #22b3e6;border-radius:2px}
+.grid::-webkit-scrollbar{width:5px;height:5px}
+.grid::-webkit-scrollbar-thumb{background:#0ea5e0;border-radius:4px}
+table{width:100%;min-width:1600px;border-collapse:separate;border-spacing:0;table-layout:fixed}
+th,td{text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 18px}
+.c-chk{width:39px;padding:0;text-align:center}
+.c-exp{width:41px;padding:0;text-align:center}
+.c-col{width:211px}
+.c-menu{width:41px;padding:0;text-align:center}
+.c-grid{padding:0;text-align:center}
+
+thead th{position:sticky;top:0;z-index:2;height:28px;background:var(--head);color:#fff;font-size:13px;font-weight:600;border-right:1px solid #fff}
+thead th:last-child{border-right:none}
+tbody td{height:25px;font-size:12.5px;color:#222;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+tbody td:last-child{border-right:none}
+tbody tr:nth-child(even) td{background:#f8f9fa}
+tbody tr:hover td{background:#eaf3fb}
+
+/* checkboxes */
+.chk{appearance:none;-webkit-appearance:none;width:14px;height:14px;border:1.5px solid #6f6f6f;border-radius:2px;background:#fff;vertical-align:middle;cursor:pointer;position:relative;margin:0}
+thead .chk{width:15px;height:15px;border-color:#fff}
+.chk:checked{background:var(--head);border-color:var(--head)}
+thead .chk:checked{background:#fff;border-color:#fff}
+.chk:checked::after{content:"";position:absolute;left:3.5px;top:0;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+thead .chk:checked::after{border-color:var(--head)}
+
+/* expand button */
+.exp{width:20px;height:20px;border-radius:4px;background:#0f9fdc;border:none;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;cursor:pointer;padding:0}
+.exp svg{transition:transform .2s}
+.exp.open svg{transform:rotate(180deg)}
+
+/* ---------- Toggles ---------- */
+.toggle{position:relative;width:48px;height:18px;border-radius:9px;border:1.5px solid var(--toggle);background:var(--toggle);cursor:pointer;display:inline-flex;align-items:center;padding:0 0 0 6px;vertical-align:middle;font-family:inherit;font-size:10px;font-weight:600;color:#fff}
+.toggle .knob{position:absolute;top:3.5px;right:6px;width:8px;height:8px;border-radius:50%;background:#fff}
+.toggle.off{background:#fff;border-color:#a3a7ab;color:#a3a7ab;justify-content:flex-end;padding:0 7px 0 0}
+.toggle.off .knob{right:auto;left:3px;border:1.3px solid #a3a7ab}
+.toggle:disabled{cursor:default;opacity:.55}
+
+/* row icons */
+.kebab{display:inline-flex;flex-direction:column;align-items:center;gap:2px;vertical-align:middle;cursor:pointer;background:none;border:none;padding:2px 4px}
+.kebab i{width:3px;height:3px;background:#222;border-radius:50%}
+.kebab.active i{background:#1592d8}
+
+/* row "⋮" menu */
+.row-menu{position:fixed;z-index:150;width:120px;background:#fff;border:1px solid #b9bdc1;border-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,.12);padding:0;overflow:hidden}
+.row-menu[hidden]{display:none}
+.row-menu button{display:block;width:100%;height:24px;background:none;border:none;text-align:left;padding:0 6px;font-family:inherit;font-size:12.5px;color:#222;cursor:pointer}
+.row-menu:hover{border-color:#1c2a4a}
+.row-menu button:hover{background:#1c2a4a;color:#fff;font-weight:600}
+.dots{vertical-align:middle;cursor:pointer}
+
+/* ---------- Add New Field popup ---------- */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.35);display:flex;align-items:flex-start;justify-content:center;padding-top:307px}
+.modal-overlay[hidden]{display:none}
+.modal{position:relative;width:800px;background:#fff;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.modal-head{height:42px;display:flex;align-items:center;padding:0 10px;border-bottom:2px solid var(--pink)}
+.modal-head h3{font-size:14px;font-weight:500;color:var(--pink)}
+.modal-close{position:absolute;top:-5px;right:-5px;width:32px;height:32px;border-radius:50%;border:none;background:#fff;box-shadow:0 1px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;cursor:pointer}
+
+.modal-body{display:flex;padding:9px 0 10px}
+.modal-left{width:465px;padding:0 16px 0 10px;border-right:1px solid #dcdfe2;display:grid;grid-template-columns:156px 283px;row-gap:13px;align-content:start}
+.m-lbl{font-size:12.5px;color:#222;padding-top:8px}
+.m-input{width:100%;height:30px;border:1px solid #c8ccd0;border-radius:3px;padding:0 10px;font-family:inherit;font-size:12.5px;color:#222;outline:none;background:#fff}
+.m-input:focus{border:2px solid var(--cyan);padding:0 9px}
+.m-input.req,.m-select.req select{border-left:2px solid #e53935}
+.m-input.req:focus{border:2px solid var(--cyan);border-left-color:#e53935}
+.m-input.invalid,.m-select.invalid select{border-color:#e53935}
+.m-textarea{height:60px;padding:8px 10px;resize:none;display:block}
+.m-textarea:focus{padding:7px 9px}
+.m-under{display:flex;align-items:center;justify-content:space-between;margin-top:9px;font-size:12.5px;color:#777}
+.m-link{display:flex;align-items:center;gap:6px;background:none;border:none;font-family:inherit;font-size:12.5px;color:#777;cursor:pointer;padding:0}
+.m-link:hover{color:var(--cyan)}
+
+.m-dep{display:contents}
+.m-dep[hidden]{display:none}
+.m-select{position:relative}
+.m-select select{appearance:none;-webkit-appearance:none;width:100%;height:30px;border:1px solid #c8ccd0;border-radius:3px;padding:0 28px 0 10px;font-family:inherit;font-size:12.5px;color:#222;background:#fff;outline:none;cursor:pointer}
+.m-select select:focus{border-color:var(--cyan)}
+.m-select svg{position:absolute;right:6px;top:50%;transform:translateY(-50%);pointer-events:none}
+
+.modal-right{flex:1;padding:4px 0 0 15px}
+.m-title{font-size:12.5px;font-weight:600;color:#111}
+.m-row{display:flex;align-items:center;width:218px;justify-content:space-between;height:40px;font-size:12.5px;color:#222}
+.m-row:nth-child(2){height:38px}
+
+.yn{position:relative;width:48px;height:18px;border-radius:9px;border:1.5px solid var(--toggle);background:var(--toggle);cursor:pointer;display:inline-flex;align-items:center;padding:0 0 0 6px;font-family:inherit;font-size:10px;font-weight:600;color:#fff}
+.yn .knob{position:absolute;top:3.5px;right:6px;width:8px;height:8px;border-radius:50%;background:#fff}
+.yn.no{background:#fff;border-color:#8c9095;color:#8c9095;justify-content:flex-end;padding:0 10px 0 0}
+.yn.no .knob{right:auto;left:3px;border:1.3px solid #8c9095}
+
+.modal-foot{height:56px;border-top:1px solid #e6e8eb;display:flex;align-items:center;justify-content:flex-end;gap:6px;padding:0 13px}
+.m-btn{height:30px;border-radius:3px;font-family:inherit;font-size:12.5px;font-weight:500;cursor:pointer}
+.m-save{background:#6abf4b;border:1px solid #6abf4b;color:#fff;padding:0 19px}
+.m-cancel{background:#fff;border:1px solid #9a9ea3;color:#555;padding:0 20px}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check js/product-fields.js)",
+      "Bash(node --check js/field-types.js)",
+      "Bash(node --check js/field-types-data.js)",
+      "Bash(python -)"
+    ]
+  }
+}
