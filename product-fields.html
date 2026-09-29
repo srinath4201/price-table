@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fields and Values</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/product-layout.css">
+<link rel="stylesheet" href="css/product-fields.css">
+</head>
+<body>
+
+<!-- Top navigation -->
+<header class="topnav">
+  <div class="brand">
+    <div class="logo"><span>Blindmatrix</span></div>
+    <b>REQ</b>
+  </div>
+  <nav class="menu">
+    <a href="#">Dashboard</a>
+    <a href="all-job.html">All Job</a>
+    <a href="#">Tasks</a>
+    <a href="#">Calendar</a>
+    <a href="#">Production management</a>
+    <a href="#">Purchase orders</a>
+    <a href="#">More <svg width="11" height="7" viewBox="0 0 11 7"><path d="M0 0h11L5.5 7z" fill="#fff"/></svg></a>
+  </nav>
+  <div class="nav-right">
+    <div class="copilot">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c7cdf5" stroke-width="1.6" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg>
+      Ask BM Copilot <span class="beta">Beta</span>
+    </div>
+    <div class="ic ic-add" id="addBtn" title="Add">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1v14M1 8h14" stroke="#fff" stroke-width="2.6"/></svg>
+      <ul class="add-menu" id="addMenu">
+        <li><a href="#">+ Job</a></li>
+        <li><a href="#">+ Appointment</a></li>
+        <li><a href="#">+ Account</a></li>
+        <li><a href="#">+ Contact</a></li>
+        <li><a href="#">+ Task</a></li>
+        <li><a href="#">+ Product</a></li>
+      </ul>
+    </div>
+    <div class="ic ic-bell"><svg width="18" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg><span class="badge">35</span></div>
+    <a class="ic ic-settings" href="settings.html" title="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg></a>
+    <div class="help"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".6" fill="#fff"/></svg>Help &amp; Support</div>
+    <div class="user"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M5.5 19c1.5-2.6 3.8-3.8 6.5-3.8s5 1.2 6.5 3.8"/></svg>Srinath <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="#fff" stroke-width="2"><path d="M1 1.5l5 5 5-5"/></svg></div>
+  </div>
+</header>
+
+<!-- Sub header / breadcrumb -->
+<div class="subhead">
+  <div class="crumb">
+    <a href="products.html" id="crumbProduct">Zebra blinds</a>
+    <span class="sep"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="#333" stroke-width="1.3"><path d="M1 1l3 3.5L1 8M4.5 1l3 3.5-3 3.5"/></svg></span>
+    <span class="current">Fields and Values</span>
+  </div>
+  <div class="sub-actions">
+    <button class="btn-more"><svg width="15" height="4" viewBox="0 0 15 4" fill="#e5197d"><circle cx="2" cy="2" r="1.8"/><circle cx="7.5" cy="2" r="1.8"/><circle cx="13" cy="2" r="1.8"/></svg></button>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Side menu (built by js/product-layout.js) -->
+  <aside class="side" id="side" data-active="fields" data-sub="fields-table"></aside>
+
+  <!-- Main panel -->
+  <section class="main">
+    <div class="toolbar">
+      <button class="btn-pink btn-add-field" id="addFieldBtn"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 0v10M0 5h10" stroke="#fff" stroke-width="2"/></svg>Add New Field</button>
+      <button class="btn-more" title="More"><svg width="15" height="4" viewBox="0 0 15 4" fill="#e5197d"><circle cx="2" cy="2" r="1.8"/><circle cx="7.5" cy="2" r="1.8"/><circle cx="13" cy="2" r="1.8"/></svg></button>
+      <button class="btn-full" id="fullBtn" title="Full screen"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#e5197d" stroke-width="2"><path d="M1 9V1h8M19 1h8v8M27 19v8h-8M9 27H1v-8"/></svg></button>
+    </div>
+
+    <div class="grid">
+      <table>
+        <thead>
+          <tr>
+            <th class="c-chk"><input type="checkbox" class="chk" id="checkAll"></th>
+            <th class="c-exp"></th>
+            <th class="c-col">Field Name</th>
+            <th class="c-col">Field Code</th>
+            <th class="c-col">Field Type</th>
+            <th class="c-col">Field Information</th>
+            <th class="c-col">Mandatory</th>
+            <th class="c-col">Mobile app quick view</th>
+            <th class="c-col">Show On Job Item</th>
+            <th class="c-menu"></th>
+            <th class="c-grid"></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+
+<!-- Row "⋮" menu -->
+<div class="row-menu" id="rowMenu" hidden>
+  <button type="button" id="rowDelete">Delete</button>
+</div>
+
+<!-- Add New Field popup -->
+<div class="modal-overlay" id="fieldModal" hidden>
+  <form class="modal" id="fieldForm" novalidate role="dialog" aria-modal="true" aria-labelledby="fieldModalTitle">
+    <div class="modal-head">
+      <h3 id="fieldModalTitle">Add New Field</h3>
+      <button type="button" class="modal-close" data-close title="Close"><svg width="12" height="12" viewBox="0 0 12 12" stroke="#e5197d" stroke-width="2.6" stroke-linecap="round"><path d="M2 2l8 8M10 2l-8 8"/></svg></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-left">
+        <label class="m-lbl" for="fName">Field Name</label>
+        <input class="m-input req" id="fName" autocomplete="off">
+
+        <label class="m-lbl" for="fCode">Field Code</label>
+        <input class="m-input" id="fCode" autocomplete="off">
+
+        <label class="m-lbl" for="fType">Field Type</label>
+        <div class="m-select req">
+          <select id="fType"><option value="">Select</option></select>
+          <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+        </div>
+
+        <!-- Shown only when Field Type = "Pricing group filter" -->
+        <div class="m-dep" id="supplierRow" hidden>
+          <label class="m-lbl" for="fSupplier">Supplier</label>
+          <div class="m-select req">
+            <select id="fSupplier"><option value="">Select</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+          </div>
+        </div>
+
+        <!-- Shown once a supplier is chosen -->
+        <div class="m-dep" id="productTypeRow" hidden>
+          <label class="m-lbl" for="fProductType">Product Type</label>
+          <div class="m-select req">
+            <select id="fProductType"><option value="">Select</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+          </div>
+        </div>
+
+        <label class="m-lbl" for="fInfo">Field information</label>
+        <div>
+          <textarea class="m-input m-textarea" id="fInfo" maxlength="250"></textarea>
+          <div class="m-under">
+            <button type="button" class="m-link" id="insertLink"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round"><path d="M6.5 9.5a3 3 0 0 0 4.2 0l2.6-2.6a3 3 0 0 0-4.2-4.2L8 3.8"/><path d="M9.5 6.5a3 3 0 0 0-4.2 0L2.7 9.1a3 3 0 0 0 4.2 4.2L8 12.2"/></svg>Insert link</button>
+            <span id="infoCount">0/250</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-right">
+        <div class="m-title">Show this Field on</div>
+        <div class="m-row"><span>Job Item</span><button type="button" class="yn" id="fJobItem">Yes<span class="knob"></span></button></div>
+        <div class="m-row"><span>Online Portal</span><button type="button" class="yn" id="fPortal">Yes<span class="knob"></span></button></div>
+        <div class="m-row"><span>Mobile App Quick View</span><button type="button" class="yn no" id="fMobile">No<span class="knob"></span></button></div>
+        <div class="m-row"><span class="m-title">Mandatory</span><button type="button" class="yn no" id="fMandatory">No<span class="knob"></span></button></div>
+      </div>
+    </div>
+
+    <div class="modal-foot">
+      <button type="submit" class="m-btn m-save">Save</button>
+      <button type="button" class="m-btn m-cancel" data-close>Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/product-layout.js"></script>
+<script src="js/field-types-data.js"></script>
+<script src="js/product-fields.js"></script>
+</body>
+</html>

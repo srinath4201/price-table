@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Info</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/product-layout.css">
+<link rel="stylesheet" href="css/product-general.css">
+</head>
+<body>
+
+<!-- Top navigation -->
+<header class="topnav">
+  <div class="brand">
+    <div class="logo"><span>Blindmatrix</span></div>
+    <b>REQ</b>
+  </div>
+  <nav class="menu">
+    <a href="#">Dashboard</a>
+    <a href="all-job.html">All Job</a>
+    <a href="#">Tasks</a>
+    <a href="#">Calendar</a>
+    <a href="#">Production management</a>
+    <a href="#">Purchase orders</a>
+    <a href="#">More <svg width="11" height="7" viewBox="0 0 11 7"><path d="M0 0h11L5.5 7z" fill="#fff"/></svg></a>
+  </nav>
+  <div class="nav-right">
+    <div class="copilot">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c7cdf5" stroke-width="1.6" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg>
+      Ask BM Copilot <span class="beta">Beta</span>
+    </div>
+    <div class="ic ic-add" id="addBtn" title="Add">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1v14M1 8h14" stroke="#fff" stroke-width="2.6"/></svg>
+      <ul class="add-menu" id="addMenu">
+        <li><a href="#">+ Job</a></li>
+        <li><a href="#">+ Appointment</a></li>
+        <li><a href="#">+ Account</a></li>
+        <li><a href="#">+ Contact</a></li>
+        <li><a href="#">+ Task</a></li>
+        <li><a href="#">+ Product</a></li>
+      </ul>
+    </div>
+    <div class="ic ic-bell"><svg width="18" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg><span class="badge">35</span></div>
+    <a class="ic ic-settings" href="settings.html" title="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg></a>
+    <div class="help"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".6" fill="#fff"/></svg>Help &amp; Support</div>
+    <div class="user"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M5.5 19c1.5-2.6 3.8-3.8 6.5-3.8s5 1.2 6.5 3.8"/></svg>Srinath <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="#fff" stroke-width="2"><path d="M1 1.5l5 5 5-5"/></svg></div>
+  </div>
+</header>
+
+<!-- Sub header / breadcrumb -->
+<div class="subhead">
+  <div class="crumb">
+    <a href="products.html" id="crumbProduct">Zebra blinds</a>
+    <span class="sep"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" stroke="#333" stroke-width="1.3"><path d="M1 1l3 3.5L1 8M4.5 1l3 3.5-3 3.5"/></svg></span>
+    <span class="current">General Info</span>
+  </div>
+  <div class="sub-actions">
+    <button class="btn-more"><svg width="15" height="4" viewBox="0 0 15 4" fill="#e5197d"><circle cx="2" cy="2" r="1.8"/><circle cx="7.5" cy="2" r="1.8"/><circle cx="13" cy="2" r="1.8"/></svg></button>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- Side menu (built by js/product-layout.js) -->
+  <aside class="side" id="side" data-active="general"></aside>
+
+  <!-- Main panel -->
+  <section class="main">
+    <form class="main-body" id="productForm" novalidate>
+
+      <!-- Product Info -->
+      <div class="section info">
+        <h2>Product Info</h2>
+        <div class="info-grid">
+          <label class="lbl" for="productName">Product Name<sup>*</sup></label>
+          <input class="input" id="productName" value="Zebra blinds" required>
+          <span class="gap"></span>
+          <label class="lbl" for="productCode">Product code<sup>*</sup></label>
+          <input class="input" id="productCode" value="1656" required>
+
+          <label class="lbl" for="productCategory">Product Category<sup>*</sup></label>
+          <div class="select grey">
+            <select id="productCategory">
+              <option>Blinds with fabrics</option>
+              <option>Blinds with slats</option>
+              <option>Shutter</option>
+              <option>Shutter V2</option>
+              <option>Awnings</option>
+              <option>Soft Furnishings</option>
+            </select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#333"/></svg>
+          </div>
+          <span class="gap"></span>
+          <label class="lbl" for="costFrom">Cost Price Comes From<sup>*</sup></label>
+          <div class="select grey">
+            <select id="costFrom"><option>Price Table - Discount</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+          </div>
+
+          <label class="lbl" for="productDesc">Product Description</label>
+          <input class="input" id="productDesc" placeholder="Please Enter Your Product Description">
+          <span class="gap"></span>
+          <label class="lbl" for="sellingFrom">Selling Price Comes From<sup>*</sup></label>
+          <div class="select grey">
+            <select id="sellingFrom"><option>Cost * Markup</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+          </div>
+
+          <label class="lbl" for="productGroup">Product Group</label>
+          <div class="select">
+            <select id="productGroup"><option>Rollers, Sub group A1, A2</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#111"/></svg>
+          </div>
+          <span class="gap"></span>
+          <span class="lbl">Discount Applies To</span>
+          <div class="checks" id="discountChecks">
+            <label class="check"><input type="checkbox" checked disabled><span>Price tables</span></label>
+            <label class="check"><input type="checkbox" checked disabled><span>Options</span></label>
+            <label class="check"><input type="checkbox" checked disabled><span>Operations</span></label>
+            <button type="button" class="lock" id="lockBtn" title="Unlock to edit">
+              <svg width="10" height="12" viewBox="0 0 10 12"><path d="M2.5 5V3.5a2.5 2.5 0 0 1 5 0V5" fill="none" stroke="#333" stroke-width="1.4"/><rect x="1" y="5" width="8" height="6.5" rx="1" fill="#333"/></svg>
+            </button>
+          </div>
+
+          <label class="lbl" for="reportCode">Report Product Code</label>
+          <input class="input" id="reportCode" placeholder="Report Product Code">
+          <span class="gap"></span>
+          <span class="lbl">Product usage</span>
+          <div class="checks usage">
+            <label class="check"><input type="checkbox"><span>Made to measure</span></label>
+            <label class="check"><input type="checkbox"><span>Manufactured In-house</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modules -->
+      <div class="section modules">
+        <h2>Modules</h2>
+        <div class="mod-grid">
+          <div class="mod">Production app <button type="button" class="toggle">ON<span class="knob"></span></button></div>
+          <div class="mod">Online Ordering <button type="button" class="toggle">ON<span class="knob"></span></button></div>
+          <div class="mod">Mobile App <button type="button" class="toggle">ON<span class="knob"></span></button></div>
+          <div class="mod">Job Transfers <button type="button" class="toggle off">OFF<span class="knob"></span></button></div>
+        </div>
+      </div>
+
+      <!-- Product images -->
+      <div class="section images">
+        <h2>Product images</h2>
+        <div class="img-grid">
+          <span class="lbl">Product image <span class="info-i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#333" stroke-width="1"><circle cx="7" cy="7" r="6.2"/><path d="M7 6v4M7 3.8v.6"/></svg></span></span>
+          <div class="img-box" data-gallery="product" data-single="true">
+            <span class="drop-empty">
+              <span class="up"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#e5197d" stroke-width="1.4"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><path d="M8 11V5M5.5 7.5L8 5l2.5 2.5M5 11h6"/></svg></span>
+              <span class="drop-text"><b>Upload Image</b> or drag and drop(Max 1 MB)</span>
+            </span>
+            <div class="thumb broken selected"><button type="button" class="rm" title="Remove"><svg width="6" height="6" viewBox="0 0 6 6" stroke="#fff" stroke-width="1.4"><path d="M1 1l4 4M5 1L1 5"/></svg></button></div>
+            <button type="button" class="add-img" title="Add image"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.2"><path d="M15 4H3.5A1.5 1.5 0 0 0 2 5.5v14A1.5 1.5 0 0 0 3.5 21h14a1.5 1.5 0 0 0 1.5-1.5V10"/><path d="M2.5 18l5-5 4 4 2.5-2.5 4.5 4.5"/><circle cx="12.5" cy="9.5" r="1.3"/><path d="M19 2v6M16 5h6"/></svg></button>
+          </div>
+          <span class="gap"></span>
+          <span class="lbl">Background images <span class="info-i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#333" stroke-width="1"><circle cx="7" cy="7" r="6.2"/><path d="M7 6v4M7 3.8v.6"/></svg></span></span>
+          <div class="img-box" data-gallery="background">
+            <span class="drop-empty">
+              <span class="up"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#e5197d" stroke-width="1.4"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><path d="M8 11V5M5.5 7.5L8 5l2.5 2.5M5 11h6"/></svg></span>
+              <span class="drop-text"><b>Upload Image</b> or drag and drop(Max 1 MB)</span>
+            </span>
+            <div class="thumb bg1 selected"><button type="button" class="rm" title="Remove"><svg width="6" height="6" viewBox="0 0 6 6" stroke="#fff" stroke-width="1.4"><path d="M1 1l4 4M5 1L1 5"/></svg></button></div>
+            <div class="thumb bg2"><button type="button" class="rm" title="Remove"><svg width="6" height="6" viewBox="0 0 6 6" stroke="#fff" stroke-width="1.4"><path d="M1 1l4 4M5 1L1 5"/></svg></button></div>
+            <div class="thumb bg3"><button type="button" class="rm" title="Remove"><svg width="6" height="6" viewBox="0 0 6 6" stroke="#fff" stroke-width="1.4"><path d="M1 1l4 4M5 1L1 5"/></svg></button></div>
+            <button type="button" class="add-img" title="Add image"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.2"><path d="M15 4H3.5A1.5 1.5 0 0 0 2 5.5v14A1.5 1.5 0 0 0 3.5 21h14a1.5 1.5 0 0 0 1.5-1.5V10"/><path d="M2.5 18l5-5 4 4 2.5-2.5 4.5 4.5"/><circle cx="12.5" cy="9.5" r="1.3"/><path d="M19 2v6M16 5h6"/></svg></button>
+          </div>
+
+          <span class="lbl">Product frame <span class="info-i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#333" stroke-width="1"><circle cx="7" cy="7" r="6.2"/><path d="M7 6v4M7 3.8v.6"/></svg></span></span>
+          <label class="drop">
+            <span class="up"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#e5197d" stroke-width="1.4"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><path d="M8 11V5M5.5 7.5L8 5l2.5 2.5M5 11h6"/></svg></span>
+            <span class="drop-text"><b>Upload Image</b> or drag and drop(Max 1 MB)</span>
+            <input type="file" accept="image/*" class="hidden-file">
+          </label>
+          <span class="gap"></span>
+          <span class="lbl">Banner image <span class="info-i"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#333" stroke-width="1"><circle cx="7" cy="7" r="6.2"/><path d="M7 6v4M7 3.8v.6"/></svg></span></span>
+          <label class="drop">
+            <span class="up"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#e5197d" stroke-width="1.4"><rect x="1.5" y="1.5" width="13" height="13" rx="3"/><path d="M8 11V5M5.5 7.5L8 5l2.5 2.5M5 11h6"/></svg></span>
+            <span class="drop-text"><b>Upload Image</b> or drag and drop(Max 1 MB)</span>
+            <input type="file" accept="image/*" class="hidden-file">
+          </label>
+        </div>
+      </div>
+
+      <!-- Size -->
+      <div class="section size">
+        <h2>Size</h2>
+        <div class="size-row">
+          <label class="lbl" for="maxArea">Maximum area</label>
+          <input class="input" id="maxArea" type="number" min="0" step="any" placeholder="Enter value">
+          <div class="select">
+            <select id="areaUnit"><option>Sq. m</option><option>Sq. ft</option><option>Sq. yd</option></select>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0h10L5 6z" fill="#b5b9bd"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <input type="file" accept="image/*" class="hidden-file" id="galleryFile">
+    </form>
+
+    <div class="main-foot">
+      <button type="submit" form="productForm" class="btn btn-save">Save &amp; Next</button>
+      <a href="products.html" class="btn btn-cancel">Cancel</a>
+    </div>
+  </section>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/product-layout.js"></script>
+<script src="js/product-general.js"></script>
+</body>
+</html>

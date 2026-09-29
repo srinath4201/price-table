@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Job</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/all-job.css">
+</head>
+<body>
+
+<!-- Top navigation -->
+<header class="topnav">
+  <div class="brand">
+    <div class="logo"><span>Blindmatrix</span></div>
+    <b>REQ</b>
+  </div>
+  <nav class="menu">
+    <a href="#">Dashboard</a>
+    <a href="all-job.html" class="active">All Job</a>
+    <a href="#">Tasks</a>
+    <a href="#">Calendar</a>
+    <a href="#">Production management</a>
+    <a href="#">Purchase orders</a>
+    <a href="#">More <svg width="11" height="7" viewBox="0 0 11 7"><path d="M0 0h11L5.5 7z" fill="#fff"/></svg></a>
+  </nav>
+  <div class="nav-right">
+    <div class="copilot">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c7cdf5" stroke-width="1.6" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg>
+      Ask BM Copilot <span class="beta">Beta</span>
+    </div>
+    <div class="ic ic-add" id="addBtn" title="Add">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1v14M1 8h14" stroke="#fff" stroke-width="2.6"/></svg>
+      <ul class="add-menu" id="addMenu">
+        <li><a href="#">+ Job</a></li>
+        <li><a href="#">+ Appointment</a></li>
+        <li><a href="#">+ Account</a></li>
+        <li><a href="#">+ Contact</a></li>
+        <li><a href="#">+ Task</a></li>
+        <li><a href="#">+ Product</a></li>
+      </ul>
+    </div>
+    <div class="ic ic-bell"><svg width="18" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg><span class="badge">53</span></div>
+    <a class="ic ic-settings" href="settings.html" title="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.6 7.6 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.6 7.6 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.5 7.5 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg></a>
+    <div class="help"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".6" fill="#fff"/></svg>Help &amp; Support</div>
+    <div class="user"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M5.5 19c1.5-2.6 3.8-3.8 6.5-3.8s5 1.2 6.5 3.8"/></svg>Srinath <svg width="12" height="8" viewBox="0 0 12 8" fill="none" stroke="#fff" stroke-width="2"><path d="M1 1.5l5 5 5-5"/></svg></div>
+  </div>
+</header>
+
+<!-- Sub header -->
+<div class="subhead">
+  <h1>All Job</h1>
+  <div class="sub-actions">
+    <button class="btn-pink">Default View <svg width="11" height="7" viewBox="0 0 11 7"><path d="M0 0h11L5.5 7z" fill="#fff"/></svg></button>
+    <button class="btn-pink reports">Reports <svg width="11" height="7" viewBox="0 0 11 7"><path d="M0 0h11L5.5 7z" fill="#fff"/></svg></button>
+    <button class="btn-more"><svg width="15" height="4" viewBox="0 0 15 4" fill="#e5197d"><circle cx="2" cy="2" r="1.8"/><circle cx="7.5" cy="2" r="1.8"/><circle cx="13" cy="2" r="1.8"/></svg></button>
+  </div>
+</div>
+
+<main class="content">
+  <div class="tabs">
+    <a href="#" class="active">Default View</a>
+    <a href="#">Work In Progress</a>
+    <a href="#">Default Invoice View</a>
+    <a href="#">Accounts View</a>
+    <a href="#">Products View</a>
+    <a href="#">Backorder View</a>
+  </div>
+
+  <div class="tools">
+    <div class="filter-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="#e5197d"><path d="M2 3h20l-8 9.5V20l-4 2v-9.5z"/></svg></div>
+    <input class="search" placeholder="Search for">
+  </div>
+
+  <div class="grid-wrap">
+    <div class="grid">
+      <table>
+        <thead>
+          <tr>
+            <th class="c-chk"><span class="chk"></span></th>
+            <th class="c-exp"></th>
+            <th class="col">Job Ref No</th>
+            <th class="col">Delivery Account Ref</th>
+            <th class="col">Job Due Date</th>
+            <th class="col">Qty</th>
+            <th class="col">Status Notes</th>
+            <th class="col">Job Status</th>
+            <th class="col">Cost Price</th>
+            <th class="col">Last Name</th>
+            <th class="c-gross">Gross Price</th>
+            <th class="c-act"><span class="set-btn"><svg width="14" height="12" viewBox="0 0 14 12" fill="none" stroke="#e5197d" stroke-width="1.4"><path d="M0 2h14M0 6h14M0 10h14"/><circle cx="9" cy="2" r="1.4" fill="#fff"/><circle cx="4" cy="6" r="1.4" fill="#fff"/><circle cx="10" cy="10" r="1.4" fill="#fff"/></svg></span></th>
+          </tr>
+          <tr class="frow" id="filterRow"></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div class="side-toggle"><svg width="9" height="12" viewBox="0 0 9 12" fill="none" stroke="#fff" stroke-width="2"><path d="M7 1L2 6l5 5"/></svg></div>
+  </div>
+
+  <div class="footer"><span class="total">Total Record</span></div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/all-job.js"></script>
+</body>
+</html>
